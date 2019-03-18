@@ -10,13 +10,13 @@ script:
 
 after_success:
   - docker build -t mooveprince/fib-client ./client
-  - docker build -t moovprince/fib-server ./server
-  - docker build -t moovprince/fib-worker ./worker
+  - docker build -t mooveprince/fib-server ./server
+  - docker build -t mooveprince/fib-worker ./worker
   - docker build -t mooveprince/fib-nginx ./nginx
   - echo "$DOCKER_PW" | docker login -u "$DOCKER_ID" --password-stdin
   - docker push mooveprince/fib-client
-  - docker push moovprince/fib-server
-  - docker push moovprince/fib-worker
+  - docker push mooveprince/fib-server
+  - docker push mooveprince/fib-worker
   - docker push mooveprince/fib-nginx
 
 
