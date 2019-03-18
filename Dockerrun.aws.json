@@ -5,25 +5,25 @@
             "name" : "client",
             "image" : "mooveprince/fib-client",
             "hostname" : "client",
-            "essential": "false"
+            "essential": false
         },
         {
             "name" : "server",
             "image" : "mooveprince/fib-server",
-            "hostname":"server",
-            "essential": "false"
+            "hostname":"api",
+            "essential": false
         },
         {
             "name" : "worker",
             "image" : "mooveprince/fib-worker",
-            "hostname":"server",
-            "essential": "worker"
+            "hostname":"worker",
+            "essential": false
         },
         {
             "name" : "nginx",
             "image" : "mooveprince/fib-nginx",
             "hostname":"nginx",
-            "essential": "true"
+            "essential": true
         }        
     ]
 
