@@ -1,0 +1,30 @@
+{
+    "AWSEBDockerrunVersion":2,
+    "containerDefinitions": [
+        {
+            "name" : "client",
+            "image" : "mooveprince/fib-client",
+            "hostname" : "client",
+            "essential": "false"
+        },
+        {
+            "name" : "server",
+            "image" : "mooveprince/fib-server",
+            "hostname":"server",
+            "essential": "false"
+        },
+        {
+            "name" : "worker",
+            "image" : "mooveprince/fib-worker",
+            "hostname":"server",
+            "essential": "worker"
+        },
+        {
+            "name" : "nginx",
+            "image" : "mooveprince/fib-nginx",
+            "hostname":"nginx",
+            "essential": "true"
+        }        
+    ]
+
+}
