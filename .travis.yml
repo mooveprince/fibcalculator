@@ -19,4 +19,17 @@ after_success:
   - docker push mooveprince/fib-worker
   - docker push mooveprince/fib-nginx
 
+deploy:
+  provider: elasticbeanstalk
+  region: us-east-1
+  app:  fib-calculator
+  env: FibCalculator-env
+  bucket_name: elasticbeanstalk-us-east-1-674449595317
+  bucket_path: fibcal-docker
+  on:
+    branch: master
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key: 
+    secure: $AWS_SECRET_KEY
+
 
